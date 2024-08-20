@@ -10,7 +10,6 @@
 
 <body>
     {{-- Konten halaman --}}
-    @yield('content')
 </body>
 
 </html>

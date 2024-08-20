@@ -44,8 +44,8 @@
                         Pages
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
-                        <li><a class="dropdown-item" href="office">Office</a></li>
-                        <li><a class="dropdown-item" href="galery">Our Gallery</a></li>
+                        <li><a class="dropdown-item" href="/office">Office</a></li>
+                        <li><a class="dropdown-item" href="/galery">Our Gallery</a></li>
                         <li><a class="dropdown-item" href="/#Q&A">Q&A</a></li>
                         <li><a class="dropdown-item" href="/#from">From Us</a></li>
                     </ul>

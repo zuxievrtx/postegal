@@ -23,9 +23,7 @@
 
 {{-- Custom CSS --}}
 <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-@endonce
 
-@once
 {{-- AOS JS --}}
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 

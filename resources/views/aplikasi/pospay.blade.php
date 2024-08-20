@@ -6,34 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>POSIND TEGAL - Our Gallery</title>
 
-  <!-- Favicons -->
-  <link href="assets/img/poslogo.JPG" rel="icon">
-  <link href="assets/img/poslogo.JPG" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruluko|Josefin Sans">
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="path/to/your/styles.css">
-  <!-- AOS CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="assets/css/style.css">
+  @extends('layout.app')
 </head>
 
 <body>
@@ -61,24 +34,23 @@
       <div class="container">
         <div class="row justify-content-center" data-aos="zoom-in">
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/Logo Dapenpos.png" class="img-fluid" alt="">
+            <img src="{{ asset('/assets/img/Logo Dapenpos.png') }}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/Logistik.png" class="img-fluid" alt="">
+            <img src="{{ asset('assets/img/Logistik.png') }}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/Logo ULBI.png" class="img-fluid" alt="">
+            <img src="{{ asset('assets/img/Logo ULBI.png') }}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/Logo Pos Properti.png" class="img-fluid" alt="">
+            <img src="{{ asset('assets/img/Logo Pos Properti.png') }}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/Logo Posfin.png" class="img-fluid" alt="">
+            <img src="{{ asset('assets/img/Logo Posfin.png') }}" class="img-fluid" alt="">
           </div>
         </div>
       </div>
     </section>
-
     <!-- End Cliens Section -->
 
     <section id="features" class="features-section">
@@ -131,7 +103,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
-            <img src="assets/img/pospay (1).png" alt="Handphone" class="center-phone-image">
+            <img src="{{asset ('assets/img/pospay (1).png') }}" alt="Handphone" class="center-phone-image">
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="feature-box">
@@ -183,7 +155,7 @@
             <div class="row g-5">
               <div class="col-lg-6 col-xl-3">
                 <div class="footer-item-1">
-                  <img src="assets/img/pos logo.png" alt="" class="img-fluid logo-footer">
+                  <img src="{{asset ('assets/img/pos logo.png') }}" alt="" class="img-fluid logo-footer">
                   <div class="contact-info">
                     <i class="fas fa-phone" style="color: #47b2e4;"></i>Hello Pos: 1500161
                   </div>
@@ -205,7 +177,7 @@
                     <a href="#">
                       <div class="d-flex align-items-center">
                         <div class="rounded-circle border border-2 border-primary overflow-hidden" style="width: 60px; height: 60px;">
-                          <img src="assets/img/news1.jpg" class="img-zoomin img-fluid rounded-circle w-100 h-100" alt="">
+                          <img src="{{asset ('assets/img/news1.jpg') }}" class="img-zoomin img-fluid rounded-circle w-100 h-100" alt="">
                         </div>
                         <div class="d-flex flex-column ps-3">
                           <a href="https://www.tribunnews.com/techno/2024/05/18/pos-indonesia-sulap-3000-aset-gedung-jadi-tempat-kumpul-peminat-e-sport" class="h6 text-white">
@@ -220,7 +192,7 @@
                     <a href="#">
                       <div class="d-flex align-items-center">
                         <div class="rounded-circle border border-2 border-primary overflow-hidden" style="width: 60px; height: 60px;">
-                          <img src="assets/img/news4.jpg" class="img-zoomin img-fluid rounded-circle w-100 h-100" alt="">
+                          <img src="{{asset ('assets/img/news4.jpg') }}" class="img-zoomin img-fluid rounded-circle w-100 h-100" alt="">
                         </div>
                         <div class="d-flex flex-column ps-3">
                           <a href="https://www.rri.co.id/bisnis/833809/dorong-umkm-naik-kelas-melalui-posaja-umkm-fest-2024"
@@ -253,42 +225,42 @@
                   <div class="row g-3">
                     <div class="col-6">
                       <div class="rounded overflow-hidden mb-8">
-                        <img src="assets/img/Pos_Ekspor (1).png" class="img-zoomin img-fluid w-100" alt="">
+                        <img src="{{asset ('assets/img/Pos_Ekspor (1).png') }}" class="img-zoomin img-fluid w-100" alt="">
                       </div>
                     </div>
                     <div class="col-6">
                       <div class="rounded overflow-hidden mb-8">
-                        <img src="assets/img/Pos_Nextday (1).png" class="img-zoomin img-fluid w-100" alt="">
+                        <img src="{{asset ('assets/img/Pos_Nextday (1).png') }}" class="img-zoomin img-fluid w-100" alt="">
                       </div>
                     </div>
                     <div class="col-6">
                       <div class="rounded overflow-hidden mb-8">
-                        <img src="assets/img/Pos_Reguler (1).png" class="img-zoomin img-fluid w-100" alt="">
+                        <img src="{{asset ('assets/img/Pos_Reguler (1).png') }}" class="img-zoomin img-fluid w-100" alt="">
                       </div>
                     </div>
                     <div class="col-6">
                       <div class="rounded overflow-hidden mb-8">
-                        <img src="assets/img/Pos_Sameday (1).png" class="img-zoomin img-fluid w-100" alt="">
+                        <img src="{{asset ('assets/img/Pos_Sameday (1).png') }}" class="img-zoomin img-fluid w-100" alt="">
                       </div>
                     </div>
                     <div class="col-6">
                       <div class="rounded overflow-hidden mb-8">
-                        <img src="assets/img/E_Paket.png" class="img-zoomin img-fluid w-100" alt="">
+                        <img src="{{asset ('assets/img/E_Paket.png') }}" class="img-zoomin img-fluid w-100" alt="">
                       </div>
                     </div>
                     <div class="col-6">
                       <div class="rounded overflow-hidden mb-8">
-                        <img src="assets/img/EMS.png" class="img-zoomin img-fluid w-100" alt="">
+                        <img src="{{asset ('assets/img/EMS.png') }}" class="img-zoomin img-fluid w-100" alt="">
                       </div>
                     </div>
                     <div class="col-6">
                       <div class="rounded overflow-hidden mb-8">
-                        <img src="assets/img/posaja (1).png" class="img-zoomin img-fluid w-100 posaja-logo" alt="">
+                        <img src="{{asset ('assets/img/posaja (1).png') }}" class="img-zoomin img-fluid w-100 posaja-logo" alt="">
                       </div>
                     </div>
                     <div class="col-6">
                       <div class="rounded overflow-hidden mb-8">
-                        <img src="assets/img/pospay.png" class="img-zoomin img-fluid w-100" alt="">
+                        <img src="{{asset ('assets/img/pospay.png') }}" class="img-zoomin img-fluid w-100" alt="">
                       </div>
                     </div>
                   </div>
@@ -323,18 +295,6 @@
         </a>
       </div>
     </div>
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
 
 </body>
 

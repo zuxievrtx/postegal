@@ -466,8 +466,7 @@
                             <h6>
                                 PosIND dan Bina Karya Luncurkan Nusantara Logistics Hub di IKN
                             </h6>
-                            <a
-                                href="news-details.html"
+                            <a href="{{ route('berita.show', 'pos-indonesia-sulap-3000-aset-gedung') }}"
                                 class="details-link"
                                 title="More Details"><i class="bx bx-link"></i></a>
                         </div>

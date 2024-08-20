@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>POSIND TEGAL - Our Gallery</title>
+  <title>POSIND TEGAL - Our Apps</title>
 
   @extends('layout.app')
 </head>
@@ -34,7 +34,7 @@
       <div class="container">
         <div class="row justify-content-center" data-aos="zoom-in">
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ asset('assets/img/Logo Dapenpos.png') }}" class="img-fluid" alt="">
+            <img src="{{ asset('/assets/img/Logo Dapenpos.png') }}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
             <img src="{{ asset('assets/img/Logistik.png') }}" class="img-fluid" alt="">
