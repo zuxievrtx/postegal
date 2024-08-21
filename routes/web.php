@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
-use App\Http\Controllers\Admin;
 
 
 
@@ -17,12 +16,6 @@ use App\Http\Controllers\Admin;
 |
 */
 
-Route::group(['prefix' => config('backpack.base.route_prefix', 'admin'), 'middleware' => ['web', 'auth'], 'namespace' => 'App\Http\Controllers\Admin'], function () {
-    // Backpack\NewsCRUD
-    Route::crud('article', 'ArticleCrudController');
-    Route::crud('category', 'CategoryCrudController');
-    Route::crud('tag', 'TagCrudController');
-});
 
 Route::get('/', function () {
     return view('landing/index');
@@ -45,6 +38,10 @@ Route::get('apps/posaja', function () {
     return view('aplikasi.posaja');
 });
 
+Route::get('office/adiwerna', function () {
+    return view('kantor.adiwerna');
+});
+
 
 
 // Berita
@@ -52,7 +49,4 @@ Route::get('berita/1', function () {
     return view('berita.news-details');
 });
 
-Route::get('/news', [NewsController::class, 'index'])->name('news.index');
-Route::get('/news/create', [NewsController::class, 'create'])->name('news.create');
-Route::post('/news', [NewsController::class, 'store'])->name('news.store');
 Route::get('/news/{id}', [NewsController::class, 'show'])->name('news.show');
