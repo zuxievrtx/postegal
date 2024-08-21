@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\Admin;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,13 @@ use App\Http\Controllers\NewsController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::group(['prefix' => config('backpack.base.route_prefix', 'admin'), 'middleware' => ['web', 'auth'], 'namespace' => 'App\Http\Controllers\Admin'], function () {
+    // Backpack\NewsCRUD
+    Route::crud('article', 'ArticleCrudController');
+    Route::crud('category', 'CategoryCrudController');
+    Route::crud('tag', 'TagCrudController');
+});
 
 Route::get('/', function () {
     return view('landing/index');
@@ -34,6 +44,8 @@ Route::get('apps/pospay', function () {
 Route::get('apps/posaja', function () {
     return view('aplikasi.posaja');
 });
+
+
 
 // Berita
 Route::get('berita/1', function () {

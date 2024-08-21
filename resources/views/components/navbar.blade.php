@@ -50,16 +50,24 @@
                         <li><a class="dropdown-item" href="/#from">From Us</a></li>
                     </ul>
                 </li>
+                @if(backpack_auth()->check())
                 <li class="nav-item">
-                    <a class="nav-link btn rounded-pill login-btn" href="login.html">
+                    <a class="nav-link btn rounded-pill dashboard-btn" href="{{ backpack_url('dashboard') }}">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </li>
+                @else
+                <li class="nav-item">
+                    <a class="nav-link btn rounded-pill login-btn" href="{{ backpack_url('login') }}">
                         <i class="fas fa-sign-in-alt"></i> Login
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn rounded-pill signup-btn" href="signup.html">
+                    <a class="nav-link btn rounded-pill signup-btn" href="{{ backpack_url('register') }}">
                         <i class="fas fa-user-plus"></i> Sign Up
                     </a>
                 </li>
+                @endif
             </ul>
         </div>
     </div>

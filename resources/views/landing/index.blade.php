@@ -466,7 +466,8 @@
                             <h6>
                                 PosIND dan Bina Karya Luncurkan Nusantara Logistics Hub di IKN
                             </h6>
-                            <a href="{{ route('berita.show', 'pos-indonesia-sulap-3000-aset-gedung') }}"
+                            <a
+                                href="news-details1.html"
                                 class="details-link"
                                 title="More Details"><i class="bx bx-link"></i></a>
                         </div>
@@ -749,7 +750,7 @@
                                     paket.
                                 </p>
                                 <div class="button-group">
-                                    <a class="btn custom-btn" href="posaja.html">Read More</a>
+                                    <a class="btn custom-btn" href="/apps/posaja">Read More</a>
                                     <a
                                         class="btn custom-btn"
                                         href="https://play.google.com/store/apps/details?id=com.posindonesia.cob">Download Now</a>
@@ -776,7 +777,7 @@
                                     secara ‘mobile’.
                                 </p>
                                 <div class="button-group">
-                                    <a class="btn custom-btn" href="pospay.html">Read More</a>
+                                    <a class="btn custom-btn" href="/apps/pospay">Read More</a>
                                     <a
                                         class="btn custom-btn"
                                         href="https://play.google.com/store/apps/details?id=com.posindonesia.giropos">Download Now</a>
@@ -803,7 +804,7 @@
                         </p>
                     </div>
                     <div class="col-lg-3 cta-btn-container text-center">
-                        <a class="cta-btn align-middle" href="#">
+                        <a class="cta-btn align-middle" href="{{ backpack_url('register') }}">
                             <i class="fas fa-user-plus"></i> Sign Up
                         </a>
                     </div>
@@ -1088,13 +1089,21 @@
         class="back-to-top d-flex align-items-center justify-content-center"
         id="back-to-top"><i class="bi bi-arrow-up-short"></i></a>
 
-    <div class="whatsapp-chat-container" id="whatsapp-chat-container">
-        <div class="whatsapp-chat-bubble" id="whatsapp-chat-bubble">
-            <span class="notification">CS</span>
-            <i class="fab fa-whatsapp"></i>
-            <a target="_blank" href="https://wa.me/6281384911009"> </a>
-        </div>
-    </div>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/66c4620e50c10f7a009e61c1/1i5nhu2r4';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/aos/aos.js"></script>
