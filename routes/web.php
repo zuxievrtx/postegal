@@ -49,4 +49,30 @@ Route::get('berita/1', function () {
     return view('berita.news-details');
 });
 
-Route::get('/news/{id}', [NewsController::class, 'show'])->name('news.show');
+Route::get('berita/2', function () {
+    return view('berita.news-details1');
+});
+
+Route::get('berita/3', function () {
+    return view('berita.news-details2');
+});
+
+Route::get('berita/4', function () {
+    return view('berita.news-details3');
+});
+
+Route::get('berita/5', function () {
+    return view('berita.news-details4');
+});
+
+Route::get('berita/6', function () {
+    return view('berita.news-details5');
+});
+
+Route::get('berita/7', function () {
+    return view('berita.news-details6');
+});
+
+Route::get('berita/8', function () {
+    return view('berita.news-details7');
+});

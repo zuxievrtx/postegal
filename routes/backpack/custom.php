@@ -18,6 +18,7 @@ Route::group([
 ], function () { // custom admin routes
     Route::crud('user', 'UserCrudController');
     Route::crud('news', 'NewsCrudController');
+    Route::get('dashboard', 'App\Http\Controllers\Admin\DashboardController@dashboard')->name('backpack.dashboard');
 }); // this should be the absolute last line of this file
 
 

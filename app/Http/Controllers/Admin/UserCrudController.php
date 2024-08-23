@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\UserRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use Backpack\CRUD\app\Models\Traits\CrudTrait;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 
 /**
  * Class UserCrudController
@@ -24,6 +27,9 @@ class UserCrudController extends CrudController
      * 
      * @return void
      */
+
+    use CrudTrait;
+
     public function setup()
     {
         CRUD::setModel(\App\Models\User::class);
@@ -41,10 +47,24 @@ class UserCrudController extends CrudController
     {
         CRUD::setFromDb(); // set columns from db columns.
 
-        /**
-         * Columns can be defined using the fluent syntax:
-         * - CRUD::column('price')->type('number');
-         */
+        // Add columns to display roles and permissions
+        CRUD::addColumn([
+            'name'  => 'roles',
+            'label' => 'Roles',
+            'type'  => 'select_multiple',
+            'entity' => 'roles',
+            'attribute' => 'name',
+            'model' => Role::class,
+        ]);
+
+        CRUD::addColumn([
+            'name'  => 'permissions',
+            'label' => 'Permissions',
+            'type'  => 'select_multiple',
+            'entity' => 'permissions',
+            'attribute' => 'name',
+            'model' => Permission::class,
+        ]);
     }
 
     /**
@@ -55,13 +75,29 @@ class UserCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::setValidation();
         CRUD::setFromDb(); // set fields from db columns.
 
-        /**
-         * Fields can be defined using the fluent syntax:
-         * - CRUD::field('price')->type('number');
-         */
+        // Add role field
+        CRUD::addField([
+            'name'  => 'roles',
+            'label' => 'Roles',
+            'type'  => 'select_multiple',
+            'entity' => 'roles',
+            'attribute' => 'name',
+            'model' => Role::class,
+            'pivot' => true,
+        ]);
+
+        // Add permission field
+        CRUD::addField([
+            'name'  => 'permissions',
+            'label' => 'Permissions',
+            'type'  => 'select_multiple',
+            'entity' => 'permissions',
+            'attribute' => 'name',
+            'model' => Permission::class,
+            'pivot' => true,
+        ]);
     }
 
     /**

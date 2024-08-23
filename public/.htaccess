@@ -1,11 +1,12 @@
-RewriteEngine on
+RewriteEngine On
 
+# Append ".html" extension if the file exists
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f
+RewriteRule !\.\w{2,4}$ %{REQUEST_URI}.html [L]
 
-RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
-RewriteRule ^ /%1 [NC,L,R]
-
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+# Otherwise append ".php" extension if the file exists
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.php -f
+RewriteRule !\.\w{2,4}$ %{REQUEST_URI}.php [L]
 
 
 

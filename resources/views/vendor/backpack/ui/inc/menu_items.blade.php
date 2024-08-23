@@ -1,8 +1,9 @@
-{{-- This file is used for menu items by any Backpack v6 theme --}}
-<li class="nav-item"><a class="nav-link" href="{{ backpack_url('dashboard') }}"><i class="la la-home nav-icon"></i>
-        {{ trans('backpack::base.dashboard') }}</a></li>
+@if (!backpack_user()->hasRole('Member'))
+    {{-- Menu items untuk non-member users --}}
+    <x-backpack::menu-item title="Users" icon="la la-user" :link="backpack_url('user')" />
+    <x-backpack::menu-item title="Roles" icon="la la-group" :link="backpack_url('role')" />
+    <x-backpack::menu-item title="Permissions" icon="la la-key" :link="backpack_url('permission')" />
+@endif
 
-<li class="nav-item"><a class="nav-link" href="{{ backpack_url('news') }}"><i class="nav-icon la la-newspaper-o"></i>
-        News</a></li>
-
-<x-backpack::menu-item title="Users" icon="la la-question" :link="backpack_url('user')" />
+{{-- Menu item Dashboard yang selalu ditampilkan --}}
+<x-backpack::menu-item title="Dashboard" icon="la la-dashboard" :link="backpack_url('dashboard')" />
