@@ -14,8 +14,12 @@ class DashboardController extends AdminController
             trans('backpack::base.dashboard') => false,
         ];
 
+        // URL Google Spreadsheet yang ingin Anda tampilkan
         $spreadsheetUrl = "https://docs.google.com/spreadsheets/d/1E_fA3kW_TmK8aYpdRGqWPdk7xiABrJEjZMcpznuaNRg/pubhtml?widget=true&amp;headers=false";
 
-        return view('admin.dashboard', $this->data, compact('spreadsheetUrl'));
+        // Menyimpan URL spreadsheet untuk digunakan di view
+        $this->data['spreadsheetUrl'] = $spreadsheetUrl;
+
+        return view('admin.dashboard', $this->data);
     }
 }

@@ -48,6 +48,7 @@
                         <li><a class="dropdown-item" href="/galery">Our Gallery</a></li>
                         <li><a class="dropdown-item" href="/#Q&A">Q&A</a></li>
                         <li><a class="dropdown-item" href="/#from">From Us</a></li>
+                        <li><a class="dropdown-item" href="/kinerja">Kinerja</a></li>
                     </ul>
                 </li>
                 @if(backpack_auth()->check())

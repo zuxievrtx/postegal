@@ -76,3 +76,7 @@ Route::get('berita/7', function () {
 Route::get('berita/8', function () {
     return view('berita.news-details7');
 });
+
+Route::get('/kinerja', function () {
+    return view('kinerja.kinerja');
+});
