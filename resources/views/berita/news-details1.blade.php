@@ -43,8 +43,8 @@
         <section id="breadcrumbs" class="breadcrumbs" style="margin-top: 10px">
             <div class="container">
                 <ol>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html #from">From Us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/#from">From Us</a></li>
                     <li>News Details</li>
                 </ol>
                 <h2>

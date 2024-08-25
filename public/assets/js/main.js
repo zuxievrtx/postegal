@@ -492,21 +492,39 @@
         // Get the modal
         var modal = document.getElementById("modal");
 
+        // Function to show the modal
+        function showModal() {
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden"; // Disable scrolling on the body
+
+            // Automatically close the modal after 7 seconds
+            setTimeout(function () {
+                hideModal();
+            }, 7000);
+        }
+
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
         // Show the modal
-        modal.style.display = "block";
+        showModal();
 
         // When the user clicks on <span> (x), close the modal
         span.onclick = function () {
             modal.style.display = "none";
+            document.body.style.overflow = "auto"; // Enable scrolling on the body
         };
 
         // Automatically close the modal after 7 seconds
         setTimeout(function () {
+            hideModal();
+        }, 4000);
+
+        // Function to hide the modal
+        function hideModal() {
             modal.style.display = "none";
-        }, 7000);
+            document.body.style.overflow = "auto"; // Enable scrolling on the body
+        }
     });
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -561,5 +579,3 @@
 
     new PureCounter();
 })();
-
-

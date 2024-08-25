@@ -172,9 +172,9 @@
                                     ada di Tegal, intip juga kegiatan-kegiatan kunjugan kami!,
                                     Dengan meng-klik tombol dibawah ini
                                 </p>
-                                <a href="office.html" class="btn btn-primary border-0 rounded-pill px-4 py-3 mt-5">Our
+                                <a href="/office" class="btn btn-primary border-0 rounded-pill px-4 py-3 mt-5">Our
                                     Office</a>
-                                <a href="galery.html" class="btn btn-primary border-0 rounded-pill px-4 py-3 mt-5">Our
+                                <a href="/galery" class="btn btn-primary border-0 rounded-pill px-4 py-3 mt-5">Our
                                     Gallery</a>
                             </div>
                         </div>
@@ -521,11 +521,11 @@
                                 </li>
 
                                 <li>
-                                    <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3"
+                                    <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4"
                                         class="collapsed"><span>04</span> Apa itu "PosPay" dan bagaimana cara
                                         kerjanya? <i class="bx bx-chevron-down icon-show"></i><i
                                             class="bx bx-chevron-up icon-close"></i></a>
-                                    <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                                    <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
                                         <p>
                                             "PosPay" adalah layanan pembayaran digital dari Pos
                                             Indonesia yang memungkinkan pelanggan untuk melakukan
@@ -539,12 +539,12 @@
                                 </li>
 
                                 <li>
-                                    <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3"
+                                    <a data-bs-toggle="collapse" data-bs-target="#accordion-list-5"
                                         class="collapsed"><span>05</span> Apakah kantor pos sekarang hanya bisa
                                         melayani antar surat?
                                         <i class="bx bx-chevron-down icon-show"></i><i
                                             class="bx bx-chevron-up icon-close"></i></a>
-                                    <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                                    <div id="accordion-list-5" class="collapse" data-bs-parent=".accordion-list">
                                         <p>
                                             Di zaman yang biasa disebut serba teknologi, kantor pos
                                             kini tidak hanya melayani pengiriman surat namun
@@ -911,19 +911,13 @@
             class="bi bi-arrow-up-short"></i></a>
 
     <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {},
-            Tawk_LoadStart = new Date();
-        (function() {
-            var s1 = document.createElement("script"),
-                s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/66c4620e50c10f7a009e61c1/1i5nhu2r4';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
+    <div class="whatsapp-chat-container" id="whatsapp-chat-container">
+        <div class="whatsapp-chat-bubble" id="whatsapp-chat-bubble">
+            <span class="notification">CS</span>
+            <i class="fab fa-whatsapp"></i>
+            <a target="_blank" href="https://wa.me/6281384911009"> </a>
+        </div>
+    </div>
     <!--End of Tawk.to Script-->
 
     <!-- Vendor JS Files -->
