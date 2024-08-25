@@ -6,4 +6,4 @@
 @endif
 
 {{-- Menu item Dashboard yang selalu ditampilkan --}}
-<x-backpack::menu-item title="Dashboard" icon="la la-dashboard" :link="backpack_url('dashboard')" />
+<x-backpack::menu-item title="Dashboard - Data" icon="la la-dashboard" :link="backpack_url('dashboard')" />
